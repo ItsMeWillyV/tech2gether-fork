@@ -1,3 +1,5 @@
+/* Global - Fonts - Variables - Body ELement */
+
 @charset "UTF-8";
 
 @font-face {
@@ -21,36 +23,88 @@ body {
     background-image: url("/img/background.png");
     min-height: 100vh;
     margin: 0;
+    /* display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden; */
+}
+
+/* Containers - Formatting Classes */
+
+.grid-container {
     display: grid;
     grid-template-rows: auto 1fr auto;
     overflow: hidden;
 }
 
+.flex-container,.flex-container-80 {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-container-80{
+    width: 80%;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+/* Header - Nav */
+
 header {
     background-color: var(--binary-blue);
     color: white;
     height: 200px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    /* display: grid;
+    grid-template-columns: auto fit-content(20%) auto fit-content(20%);
+    grid-template-rows: 1fr; */
 }
 
-header nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-header nav ul {
+header nav, header nav ul, header nav ul li{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+nav {
+    align-self: flex-start;
+}
+
+.header-text {
+    align-self: flex-end;
+    margin-top: -3%;
+}
+
+.timer {
+    width: 20%;
+    height: 5%;
+    background-color: var(--yaml-yellow);
+}
+
+header nav ul {
+    margin-right: 1rem;
 }
 
 header nav ul li {
     display: inline;
     list-style-type: none;
 }
+
+
 
 #logo {
     transform: scale(1);
@@ -71,6 +125,8 @@ footer {
     width: 100%;
 }
 
+/* Fonts */
+
 .dare {
     font-family: "Digital Dare";
     color: white;
@@ -79,6 +135,8 @@ footer {
     text-shadow: -2px 0 2px magenta;
     letter-spacing: 6px;
 }
+
+/* Buttons */
 
 .btn {
     display: inline-block;
@@ -105,14 +163,5 @@ footer {
     transform: scale(1.1);
 }
 
-.margin-auto {
-    margin: auto;
-}
+/* Formatting Classes */
 
-.text-center {
-    text-align: center;
-}
-
-.flex-container {
-    display: flex;
-}
